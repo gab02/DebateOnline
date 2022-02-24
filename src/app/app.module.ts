@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginRoutingModule } from './pages/login/login-routing.module';
 import { MainRoutingModule } from './pages/main';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MainRoutingModule } from './pages/main';
     ProfileModule,
     ProfileRoutingModule,
     SearchModule,
-    SearchRoutingModule
+    SearchRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
