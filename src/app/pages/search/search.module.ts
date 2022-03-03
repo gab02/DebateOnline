@@ -1,3 +1,5 @@
+import { PreviewCandidatoComponent } from './../preview-candidato/preview-candidato.component';
+import { SearchService } from './services/search.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,14 +13,19 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
     CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule,
     MatButtonModule,
+    HttpClientModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
@@ -28,9 +35,11 @@ import {MatListModule} from '@angular/material/list';
     ],
   declarations: [
     SearchComponent,
-    ListComponent
+    ListComponent,
+    PreviewCandidatoComponent
   ],
   providers: [
+    SearchService
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 

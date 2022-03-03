@@ -12,13 +12,16 @@ import { AppComponent } from './app.component';
 import { LoginRoutingModule } from './pages/login/login-routing.module';
 import { MainRoutingModule } from './pages/main';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PreviewCandidatoComponent } from './pages/preview-candidato/preview-candidato.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MainModule,
     MainRoutingModule,
@@ -28,7 +31,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProfileRoutingModule,
     SearchModule,
     SearchRoutingModule,
-    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
