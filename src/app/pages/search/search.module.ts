@@ -8,13 +8,14 @@ import { RouterModule } from '@angular/router';
 import { SearchComponent } from './components/search.component';
 import { ListComponent } from './components/list/list.component';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatListModule} from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   imports: [
@@ -31,17 +32,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatIconModule,
     MatDividerModule,
-    MatListModule
-    ],
-  declarations: [
-    SearchComponent,
-    ListComponent,
-    PreviewCandidatoComponent
+    MatListModule,
+    MatPaginatorModule,
   ],
-  providers: [
-    SearchService
-  ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
-
+  declarations: [SearchComponent, ListComponent, PreviewCandidatoComponent],
+  providers: [SearchService],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class SearchModule { }
+export class SearchModule {}

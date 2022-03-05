@@ -3,32 +3,42 @@
     <p class="title">Pesquise seu candidato</p>
     <br>
     <br>
-    </div>
-    <div class="flex-container">
-
-  <mat-card class="flex-container" style=" background-color: antiquewhite; padding: 2em; width: 80%; border-bottom: 8px solid #ffdd00c6
-  ; border-right: 8px solid #009c3ca8;">
-  <mat-form-field style="width: 100%;" appearance="legacy">
-    <mat-label>Pesquisar seu candidato</mat-label>
-    <input [(ngModel)]="findebar" matInput (keyup)="populate()" placeholder="Insira aqui seu candidato">
-    <mat-icon matSuffix>search</mat-icon>
-  </mat-form-field>
-  <br>
-
-  <mat-list>
-  <div *ngFor="let item of candidatos; let i = index;"  >
-    <mat-list-item (click)="perfil()">
-      {{item.name}} - {{item.partido}}
-    </mat-list-item>
-    <mat-divider></mat-divider>
-     </div>
-
-  </mat-list>
-  </mat-card>
-</div>
-
-
-  <preview-candidato [CandidatoAtual]="candidatos" ></preview-candidato>
-
-
   </div>
+  <div class="flex-container">
+
+    <mat-card class="flex-container" style=" background-color: antiquewhite; padding: 2em; width: 80%; border-bottom: 8px solid #ffdd00c6
+  ; border-right: 8px solid #009c3ca8;">
+      <mat-form-field style="width: 100%;" appearance="legacy">
+        <mat-label>Pesquisar seu candidato</mat-label>
+        <input [(ngModel)]="findebar" matInput (keyup)="populate()" placeholder="Insira aqui seu candidato">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+      <br>
+
+      <mat-list>
+        <div *ngFor="let item of candidatos; let i = index;">
+          <mat-list-item (click)="perfil()">
+            {{item.name}} - {{item.partido}}
+          </mat-list-item>
+          <mat-divider></mat-divider>
+        </div>
+
+      </mat-list>
+
+
+
+      <mat-paginator [length]="length" [pageSize]="pageSize" [pageIndex]="pgIndex" [pageSizeOptions]="pageSizeOptions"
+        style="background-color: transparent;" (page)="onPaginateChange($event)" aria-label="Select page">
+
+
+      </mat-paginator>
+
+    </mat-card>
+  </div>
+
+
+
+  <preview-candidato [CandidatoAtual]="candidatos"></preview-candidato>
+
+
+</div>
