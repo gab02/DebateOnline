@@ -1,8 +1,6 @@
 <div class="container" style="padding: 5em;">
   <div class="flex-container">
     <p class="title">Pesquise seu candidato</p>
-    <br>
-    <br>
   </div>
   <div class="flex-container">
 
@@ -14,18 +12,21 @@
         <mat-icon matSuffix>search</mat-icon>
       </mat-form-field>
       <br>
+      <section>
 
-      <mat-list>
-        <div *ngFor="let item of candidatos; let i = index;">
-          <mat-list-item (click)="perfil()">
-            {{item.name}} - {{item.partido}}
-          </mat-list-item>
-          <mat-divider></mat-divider>
-        </div>
+        <mat-list>
+          <div>
+          <article>
+            <mat-list-item *ngFor="let item of candidatos; let i = index;" (click)="perfil(item)">
+              {{item.name}} - {{item.partido}}
+            </mat-list-item>
+          </article>
+            <mat-divider></mat-divider>
+          
+          </div>
 
-      </mat-list>
-
-
+        </mat-list>
+      </section>
 
       <mat-paginator [length]="length" [pageSize]="pageSize" [pageIndex]="pgIndex" [pageSizeOptions]="pageSizeOptions"
         style="background-color: transparent;" (page)="onPaginateChange($event)" aria-label="Select page">
@@ -38,7 +39,7 @@
 
 
 
-  <preview-candidato [CandidatoAtual]="candidatos"></preview-candidato>
+  <preview-candidato [CandidatoAtual]="candidato" *ngIf="candidato"></preview-candidato>
 
 
 </div>

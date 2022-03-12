@@ -5,7 +5,7 @@ import {ListComponent, SearchComponent} from './components';
 
 export const HomeRoutes: Routes = [
     {
-        path: 'search',
+        path: '',
         component: SearchComponent,
         children: [{ path:'', component: ListComponent }]
     }

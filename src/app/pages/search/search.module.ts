@@ -13,6 +13,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+
+import { MatChipsModule } from '@angular/material/chips';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -34,6 +36,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatDividerModule,
     MatListModule,
     MatPaginatorModule,
+    MatChipsModule
   ],
   declarations: [SearchComponent, ListComponent, PreviewCandidatoComponent],
   providers: [SearchService],

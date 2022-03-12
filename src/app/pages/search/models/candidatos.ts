@@ -4,7 +4,7 @@ export class Candidatos{
 
 
  constructor(
-  public id: String,
+  public _id: String,
   public like: string,
   public unlike: string,
   public name: string,

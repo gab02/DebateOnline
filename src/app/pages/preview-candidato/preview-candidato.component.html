@@ -1,31 +1,47 @@
 <br><br><br>
 <div>
-  <mat-card *ngIf="CandidatoAtual[0]" style="background-color: antiquewhite; width: 100%;">
+  <mat-card style="background-color: antiquewhite; width: 100%;">
 
     <div class="row">
-      <div class="col-md-4">
-        <img src="../../../assets/cabo-daciolo.png" style="width: 212px; height: 312px;">
-      </div>
       <div class="col-md-8">
         <div class="row">
           <div class="col-md-6">
-            <p>{{CandidatoAtual[0].name}}</p>
+            <p>{{CandidatoAtual.name}}</p>
           </div>
           <div class="col-md-6">
-            <p>{{CandidatoAtual[0].name}}</p>
+            <p>{{CandidatoAtual.partido}}</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6">
-            <p>{{CandidatoAtual[0].name}}</p>
+            <p>{{CandidatoAtual.uf}}</p>
           </div>
-          <div class="col-md-6">
-            <p>{{CandidatoAtual[0].name}}</p>
-          </div>
+          <div class="col-md-6"></div>
+        </div>
+        <div class="row">
+          <mat-chip-list aria-label="Like">
+            <mat-chip (click)="toggleSelection('L')">
+              <mat-chip-avatar>
+              <i class="fa fa-thumbs-up"></i>
+              </mat-chip-avatar>
+              {{CandidatoAtual.like}}
+            </mat-chip>
+            <mat-chip (click)="toggleSelection('U')">
+              <mat-chip-avatar>
+              <i class="fa fa-thumbs-down"></i>
+              </mat-chip-avatar>
+              {{CandidatoAtual.unlike}}
+            </mat-chip>
+          </mat-chip-list>
+        </div>
+        
+        <div class="row" *ngIf="CandidatoAtual.comentarios.length">
+          <ul>
+            <li *ngFor="let item of CandidatoAtual.comentarios">
+              {{item.descricao}}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-
-
-
   </mat-card>

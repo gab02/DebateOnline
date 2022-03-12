@@ -26,19 +26,20 @@ export class SearchService {
         limit
     );
   }
-  carregarCandidato(name: string): Observable<any> {
+  carregarCandidato(name: String): Observable<any> {
     return this.http.get(env.baseApiUrl + this.PATH + '/' + name);
   }
-  setLikeCandidato(name: string): Observable<any> {
+  setLikeCandidato(name: String): Observable<any> {
     return this.http.put(env.baseApiUrl + this.PATH + '/' + name + '/like', {});
   }
-  setUnLikeCandidato(name: string): Observable<any> {
+  setUnLikeCandidato(name: String): Observable<any> {
     return this.http.put(
       env.baseApiUrl + this.PATH + '/' + name + '/unlike',
       {}
     );
   }
-  saveComment(name: string, comentario: string): Observable<any> {
+  
+  saveComment(name: String, comentario: String): Observable<any> {
     return this.http.post(
       env.baseApiUrl + this.PATH + '/' + name + '/comment',
       { comentario: comentario }
