@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { HttpUtilService } from 'src/app/shared/http-util.service';
 import { environment as env } from '../../../../environments/environment';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { environment as env } from '../../../../environments/environment';
 export class SearchService {
   private readonly PATH: string = '/candidato';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private httpUtil: HttpUtilService) {}
   carregarRegistroSelect(
     name: string,
     page: number,
@@ -23,14 +24,18 @@ export class SearchService {
         '&page=' +
         page +
         '&limit=' +
-        limit
+        limit,
+      this.httpUtil.headers()
     );
   }
   carregarCandidato(name: String): Observable<any> {
     return this.http.get(env.baseApiUrl + this.PATH + '/' + name);
   }
   setLikeCandidato(name: String): Observable<any> {
-    return this.http.put(env.baseApiUrl + this.PATH + '/' + name + '/like', {});
+    return this.http.put(
+      env.baseApiUrl + this.PATH + '/' + name + '/like',
+      this.httpUtil.headers()
+    );
   }
   setUnLikeCandidato(name: String): Observable<any> {
     return this.http.put(
@@ -38,7 +43,7 @@ export class SearchService {
       {}
     );
   }
-  
+
   saveComment(name: String, comentario: String): Observable<any> {
     return this.http.post(
       env.baseApiUrl + this.PATH + '/' + name + '/comment',

@@ -1,20 +1,27 @@
 import { Component } from '@angular/core';
-import { GoogleLoginProvider, SocialAuthService, SocialUser } from 'angularx-social-login';
+import {
+  GoogleLoginProvider,
+  SocialAuthService,
+  SocialUser,
+} from 'angularx-social-login';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'debateOnline';
 
-  public user: SocialUser = new SocialUser;
-  constructor(private authService: SocialAuthService) { }
+  public user: SocialUser = new SocialUser();
+  constructor(private authService: SocialAuthService) {}
   ngOnInit() {
-    this.authService.authState.subscribe(user => {
+    this.authService.authState.subscribe((user) => {
       this.user = user;
-      console.log(this.user)
+      localStorage['authToken'] = this.user.authToken;
+      localStorage['provider'] = this.user.provider;
+      console.log(localStorage['authToken']);
+      console.log(this.user);
     });
   }
   public signInWithGoogle(): void {

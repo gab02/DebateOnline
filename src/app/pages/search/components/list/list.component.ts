@@ -22,7 +22,7 @@ export class ListComponent implements OnInit {
 
   constructor(public service: SearchService, public router: Router) {}
   ngOnInit(): void {
-    this.currentPage = 1
+    this.currentPage = 1;
     this.populate();
   }
 
@@ -35,16 +35,18 @@ export class ListComponent implements OnInit {
         console.log(data);
       });
   }
-
+  getProfile() {
+    this.router.navigate(['profile']);
+  }
   onPaginateChange(event: PageEvent) {
-    this.currentPage = event.pageIndex + 1
+    this.currentPage = event.pageIndex + 1;
     this.pageSize = event.pageSize;
     this.populate();
   }
-  
+
   perfil(item: Candidatos) {
     this.service.carregarCandidato(item._id).subscribe((data) => {
       this.candidato = data;
-    })
+    });
   }
 }

@@ -18,6 +18,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   imports: [
@@ -36,7 +37,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatDividerModule,
     MatListModule,
     MatPaginatorModule,
-    MatChipsModule
+    MatDialogModule,
+    MatChipsModule,
   ],
   declarations: [SearchComponent, ListComponent, PreviewCandidatoComponent],
   providers: [SearchService],

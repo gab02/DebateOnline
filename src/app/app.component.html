@@ -1,40 +1,31 @@
-<header> Debate Candidatos
-    <nav>
-        <ul role="navigation" id="globalnav">
-            <li><a href="/"><span>Debate Condidato</span></a></li>
-            <li><a href="/login"><span>Login</span></a></li>
-        </ul>
+<mat-toolbar>
+  <button (click)="signOut()" mat-icon-button class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon">
+    <mat-icon style="color: red;">exit_to_app</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button mat-button>
+    {{user.name}} </button>
+  <button mat-icon-button class="example-icon favorite-icon" style="background-image: url({{user.photoUrl}});"
+    aria-label="Example icon-button with heart icon">
+  </button>
+</mat-toolbar>
 
-        <div class="jumbotron bg-transparent text-center">
-            <div *ngIf="!user" class="card text-center">
-                <h6 class="card-header">
-                    Social Login Demo
-                </h6>
-                <div class="card-block">
-                    <h4 class="card-title">Not signed in</h4>
-                    <p class="card-text">Sign in with</p>
-                </div>
-                <div class="card-block">
-                    <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()"><span class="fa fa-google"></span></button>
-                </div>
-            </div>
-            <div *ngIf="user" class="card text-center">
-                <h6 class="card-header">
-                    Social Login Demo
-                </h6>
-                <div class="card-block"></div>
-                <img class="card-img-top img-responsive photo" src="{{user.photoUrl}}" />
-                <div class="card-block">
-                    <h4 class="card-title">{{user.name}}</h4>
-                    <p class="card-text">{{ user.email}}</p>
-                </div>
-                <div class="card-block">
-                    <button class="btn btn-danger" (click)="signOut()">Sign out</button>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
+<!-- <header> Debate Candidatos
+  <nav>
+    <ul role="navigation" id="globalnav">
+      <li><a href="/"><span>Debate Condidato</span></a></li>
+      <li><a href="/login"><span>Login</span></a></li>
+
+      <li><a href="/login"><span>Login</span></a></li>
+
+  <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()"><span class="fa fa-google"></span></button>
+    </ul>
+
+
+  </nav>
+</header> -->
 
 <router-outlet></router-outlet>
 
