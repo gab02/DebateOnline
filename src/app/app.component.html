@@ -1,31 +1,23 @@
 <mat-toolbar>
-  <button (click)="signOut()" mat-icon-button class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon">
-    <mat-icon style="color: red;">exit_to_app</mat-icon>
-  </button>
+
   <span>My App</span>
   <span class="example-spacer"></span>
-  <button mat-button>
-    {{user.name}} </button>
-  <button mat-icon-button class="example-icon favorite-icon" style="background-image: url({{user.photoUrl}});"
-    aria-label="Example icon-button with heart icon">
-  </button>
+  <div *ngIf="!user">
+    <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()">
+      <span class="fa fa-google"></span></button>
+  </div>
+  <div *ngIf="user">
+    <button mat-button="mat-button">
+      {{user.name}}
+    </button>
+    <button mat-icon-button="mat-icon-button" class="example-icon favorite-icon" style="background-image: url({{user.photoUrl}});" aria-label="Example icon-button with heart icon"></button>
+    <button (click)="signOut()" mat-icon-button="mat-icon-button" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon style="color: red;">exit_to_app</mat-icon>
+    </button>
+  </div>
 </mat-toolbar>
 
-<!-- <header> Debate Candidatos
-  <nav>
-    <ul role="navigation" id="globalnav">
-      <li><a href="/"><span>Debate Condidato</span></a></li>
-      <li><a href="/login"><span>Login</span></a></li>
-
-      <li><a href="/login"><span>Login</span></a></li>
-
-  <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()"><span class="fa fa-google"></span></button>
-    </ul>
-
-
-  </nav>
-</header> -->
+<!-- <header> Debate Candidatos <nav> <ul role="navigation" id="globalnav"> <li><a href="/"><span>Debate Condidato</span></a></li> <li><a href="/login"><span>Login</span></a></li> <li><a href="/login"><span>Login</span></a></li> <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()"><span class="fa fa-google"></span></button> </ul> </nav> </header> -->
 
 <router-outlet></router-outlet>
 

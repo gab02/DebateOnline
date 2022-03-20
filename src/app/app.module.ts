@@ -23,6 +23,7 @@ import {
 } from 'angularx-social-login';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { NgGoogleAnalyticsModule } from "ng-google-analytics";
 
 @NgModule({
   declarations: [AppComponent],
@@ -44,6 +45,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     ReactiveFormsModule,
     SocialLoginModule,
+    NgGoogleAnalyticsModule.forRoot({ id: "G-W1Y65460WZ" }),
   ],
   providers: [
     {

@@ -18,10 +18,14 @@ export class AppComponent {
   ngOnInit() {
     this.authService.authState.subscribe((user) => {
       this.user = user;
-      localStorage['authToken'] = this.user.authToken;
-      localStorage['provider'] = this.user.provider;
-      console.log(localStorage['authToken']);
-      console.log(this.user);
+      console.log(this.user)
+      if (this.user != null){
+        localStorage['authToken'] = this.user.authToken;
+        localStorage['provider'] = this.user.provider;
+        console.log(localStorage['authToken']);
+        console.log(this.user);
+      }
+      
     });
   }
   public signInWithGoogle(): void {
