@@ -35,8 +35,10 @@ export class ListComponent implements OnInit {
         console.log(data);
       });
   }
-  getProfile() {
-    this.router.navigate(['profile']);
+  getProfile(item: Candidatos) {
+    this.router.navigate(['profile'], {
+      state: { data: item },
+    });
   }
   onPaginateChange(event: PageEvent) {
     this.currentPage = event.pageIndex + 1;

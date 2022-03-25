@@ -17,7 +17,7 @@
         <mat-list>
           <div>
             <article>
-              <mat-list-item *ngFor="let item of candidatos; let i = index;" (click)="perfil(item)">
+              <mat-list-item *ngFor="let item of candidatos; let i = index;" (click)="getProfile(item)">
                 {{item.name}} - {{item.partido}}
               </mat-list-item>
             </article>

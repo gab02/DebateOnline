@@ -1,1 +1,48 @@
-profile
+<br><br>
+<div class="container" style="padding: 2em;">
+  <mat-card style="background-color: antiquewhite; width: 100%;">
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6">
+            <p>{{candidato.name}}</p>
+          </div>
+          <div class="col-md-6">
+            <p>{{candidato.partido}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p>{{candidato.uf}}</p>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+        <div class="row">
+          <mat-chip-list aria-label="Like">
+            <mat-chip (click)="toggleSelection('L')">
+              <mat-chip-avatar>
+                <i class="fa fa-thumbs-up"></i>
+              </mat-chip-avatar>
+              {{candidato.like}}
+            </mat-chip>
+            <mat-chip (click)="toggleSelection('U')">
+              <mat-chip-avatar>
+                <i class="fa fa-thumbs-down"></i>
+              </mat-chip-avatar>
+              {{candidato.unlike}}
+            </mat-chip>
+          </mat-chip-list>
+        </div>
+
+        <div class="row" *ngIf="candidato.comentarios.length">
+          <ul>
+            <li *ngFor="let item of candidato.comentarios">
+              {{item.descricao}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>
