@@ -1,6 +1,7 @@
-<mat-toolbar>
-
-  <span>My App</span>
+<mat-toolbar style="background-color: #501FA1;">
+  <div class="container" style="padding: 1em;">
+    <span><img src="../assets/images/components/Arte 4@3x 1logoToolbar.png" style="height: 40px" /></span>
+  </div>
   <span class="example-spacer"></span>
   <div *ngIf="!user">
     <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()">
@@ -10,8 +11,10 @@
     <button mat-button="mat-button">
       {{user.name}}
     </button>
-    <button mat-icon-button="mat-icon-button" class="example-icon favorite-icon" style="background-image: url({{user.photoUrl}});" aria-label="Example icon-button with heart icon"></button>
-    <button (click)="signOut()" mat-icon-button="mat-icon-button" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <button mat-icon-button="mat-icon-button" class="example-icon favorite-icon"
+      style="background-image: url({{user.photoUrl}});" aria-label="Example icon-button with heart icon"></button>
+    <button (click)="signOut()" mat-icon-button="mat-icon-button" class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon">
       <mat-icon style="color: red;">exit_to_app</mat-icon>
     </button>
   </div>

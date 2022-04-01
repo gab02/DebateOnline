@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: rgba(17, 115, 185, 0.715); }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #e5e5e5;
+}
 @font-face {
   font-family: myFirstFont;
   src: url(./assets/fonts/Gotham-Font/Gotham-Black.otf);
@@ -13,9 +20,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
 .flex-container {
   display: flex;
   justify-content: center;
-  align-self:center;
+  align-self: center;
 }
-.title{
+.title {
   font-family: text;
   font-size: 24px;
 }

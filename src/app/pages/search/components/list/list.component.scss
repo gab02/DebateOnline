@@ -1,0 +1,52 @@
+.section-exported {
+  position: absolute;
+  width: 100%;
+  height: 515px;
+  left: 0px;
+  top: 103px;
+  background: rgba(80, 31, 161, 0.3);
+}
+.firstText-Desktop {
+  position: absolute;
+  width: 421px;
+  height: 217px;
+  left: 122px;
+  top: 119px;
+  letter-spacing: 2px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 59px;
+
+  /* branco */
+
+  color: #f2f2f2;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.SecondText-Desktop {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 23px;
+  line-height: 28px;
+  /* identical to box height, or 122% */
+  /* gray/900 */
+
+  color: #111827;
+}
+
+.ThirdText-Desktop {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  /* or 117% */
+  /* branco */
+
+  color: #f2f2f2;
+}
