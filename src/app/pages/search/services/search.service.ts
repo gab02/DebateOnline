@@ -24,8 +24,7 @@ export class SearchService {
         '&page=' +
         page +
         '&limit=' +
-        limit,
-      this.httpUtil.headers()
+        limit
     );
   }
   carregarCandidato(name: String): Observable<any> {
@@ -33,8 +32,7 @@ export class SearchService {
   }
   setLikeCandidato(name: String): Observable<any> {
     return this.http.put(
-      env.baseApiUrl + this.PATH + '/' + name + '/like',
-      this.httpUtil.headers()
+      env.baseApiUrl + this.PATH + '/' + name + '/like',{}
     );
   }
   setUnLikeCandidato(name: String): Observable<any> {

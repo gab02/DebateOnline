@@ -18,10 +18,13 @@ export class CrudComponent implements OnInit {
     private route: ActivatedRoute,
     private service: ProfileService
   ) {
-    this.routeState = this.router.getCurrentNavigation().extras.state;
-    if (this.routeState) {
-      this.profileToGet = null;
-      this.profileToGet = this.routeState.data;
+    var routerstat = this.router.getCurrentNavigation();
+    if (routerstat){
+      this.routeState = routerstat.extras.state;
+      if (this.routeState) {
+        this.profileToGet = null;
+        this.profileToGet = this.routeState.data;
+      }
     }
   }
 

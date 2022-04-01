@@ -22,6 +22,7 @@ export class AppComponent {
       if (this.user != null){
         localStorage['authToken'] = this.user.authToken;
         localStorage['provider'] = this.user.provider;
+        localStorage['idtoken'] = this.user.idToken;
         console.log(localStorage['authToken']);
         console.log(this.user);
       }

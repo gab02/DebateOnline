@@ -24,6 +24,8 @@ import {
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { NgGoogleAnalyticsModule } from "ng-google-analytics";
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './shared/http-header-intercep';
 
 @NgModule({
   declarations: [AppComponent],
@@ -62,6 +64,7 @@ import { NgGoogleAnalyticsModule } from "ng-google-analytics";
         ],
       } as SocialAuthServiceConfig,
     },
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent],
 })
