@@ -45,15 +45,15 @@ export class CrudComponent implements OnInit {
     }
   }
   getFilterByCandidate() {
-    this.name = this.profileToGet.name;
-    this.service.carregarCandidato(this.name).subscribe((data) => {
-      this.candidato = data.candidatos[0];
+    this.name = this.profileToGet._id;
+    this.service.getCandidato(this.name).subscribe((data) => {
+      this.candidato = data;
       console.log(this.candidato);
     });
   }
   unlike() {
     this.service.setUnLikeCandidato(this.candidato._id).subscribe((data) => {
-      this.service.carregarCandidato(this.candidato._id).subscribe((data) => {
+      this.service.getCandidato(this.candidato._id).subscribe((data) => {
         this.candidato = data;
       });
     });
@@ -61,7 +61,7 @@ export class CrudComponent implements OnInit {
 
   like() {
     this.service.setLikeCandidato(this.candidato._id).subscribe((data) => {
-      this.service.carregarCandidato(this.candidato._id).subscribe((data) => {
+      this.service.getCandidato(this.candidato._id).subscribe((data) => {
         this.candidato = data;
       });
     });

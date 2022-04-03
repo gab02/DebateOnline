@@ -11,3 +11,42 @@
   width: 100%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
   height: 80%;
 }
+.toolbar{
+  position: absolute;
+  width: 100%;
+  height: 103px;
+  left: 0px;
+  top: 0px;
+  background: #501FA1;
+}
+
+.logo{
+  height: 60px;
+  width: 163px;
+  left: 30px;
+  top: 20px;
+  border-radius: 0px;
+  position: absolute;
+  
+  background: url(/assets/logo.png);
+  background-size: 163px;
+}
+
+.login{
+  position: floor;
+  text-align: right;
+  font-family: 'Roboto';
+  color: #F2F2F2;
+  top: 20px;
+  border-radius: 0px;
+}
+
+.painelprinc{
+  position: absolute;
+  width: 1440px;
+  height: 515px;
+  left: 0px;
+  top: 103px;
+  
+  background: rgba(80, 31, 161, 0.3);  
+}

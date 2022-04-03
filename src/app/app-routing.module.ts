@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MainComponente } from './pages/main/components/';
 
 export const routes: Routes = [
-  {path :'', redirectTo: '/', pathMatch:'full'},
+  {path :'', component: MainComponente,pathMatch:'full'},
 ];
 
 @NgModule({

@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule} from '@angular/material/grid-list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,6 +48,7 @@ import { TokenInterceptor } from './shared/http-header-intercep';
     MatButtonModule,
     ReactiveFormsModule,
     SocialLoginModule,
+    MatGridListModule,
     NgGoogleAnalyticsModule.forRoot({ id: "G-W1Y65460WZ" }),
   ],
   providers: [

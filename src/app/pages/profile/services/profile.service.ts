@@ -16,6 +16,9 @@ export class ProfileService {
   carregarCandidato(name: String): Observable<any> {
     return this.http.get(env.baseApiUrl + this.PathCandidato + name);
   }
+  getCandidato(id: String): Observable<any> {
+    return this.http.get(env.baseApiUrl + this.PATH + '/' + id);
+  }
   saveComment(name: String, comentario: String): Observable<any> {
     return this.http.post(
       env.baseApiUrl + this.PATH + '/' + name + '/comment',

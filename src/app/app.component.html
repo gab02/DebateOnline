@@ -1,6 +1,32 @@
-<mat-toolbar style="background-color: #501FA1;">
+<header> 
+
+<div class='toolbar'>
+<a href="/"> <div class='logo'> </div></a>
+<div class='login'>
+<span class="example-spacer"></span>
+  <div *ngIf="!user">
+    <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()">
+      <span class="fa fa-google"></span></button>
+  </div>
+  <div *ngIf="user">
+    <button mat-button="mat-button">
+      {{user.name}}
+    </button>
+    <button mat-icon-button="mat-icon-button" class="example-icon favorite-icon"
+      style="background-image: url({{user.photoUrl}});" aria-label="Example icon-button with heart icon"></button>
+    <button (click)="signOut()" mat-icon-button="mat-icon-button" class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon">
+      <mat-icon style="color: red;">exit_to_app</mat-icon>
+    </button>
+  </div>
+</div>
+  
+</div>
+<!--<mat-toolbar style="background-color: #501FA1;">
   <div class="container" style="padding: 1em;">
+  <a href="/">
     <span><img src="../assets/images/components/Arte 4@3x 1logoToolbar.png" style="height: 40px" /></span>
+    </a>
   </div>
   <span class="example-spacer"></span>
   <div *ngIf="!user">
@@ -18,10 +44,18 @@
       <mat-icon style="color: red;">exit_to_app</mat-icon>
     </button>
   </div>
-</mat-toolbar>
+</mat-toolbar>-->
+</header>
+<!--<section>
+<mat-grid-list cols="1" rowHeight="1:1">
+<mat-grid-tile><div class='painelprinc'>
+</div></mat-grid-tile>
 
-<!-- <header> Debate Candidatos <nav> <ul role="navigation" id="globalnav"> <li><a href="/"><span>Debate Condidato</span></a></li> <li><a href="/login"><span>Login</span></a></li> <li><a href="/login"><span>Login</span></a></li> <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()"><span class="fa fa-google"></span></button> </ul> </nav> </header> -->
+-->
+<section>
 
 <router-outlet></router-outlet>
+</section>
+<!--<section>
 
-<footer>Development By My</footer>
+<!--<footer>Development By My</footer>-->
