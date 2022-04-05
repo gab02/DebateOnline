@@ -31,6 +31,35 @@
               <button class="findbutton">Pesquisar</button>
 
             </div>
+            <div class="findbox">
+              <div class="titlefind">
+                <p>Esses são os candidatos encontrados</p>
+              </div>
+              <div class="result">
+                <ul *ngIf="candidatos!=undefined">
+                  <li *ngfor="let item of candidatos; let i = index;" (click)="getProfile(item)"> 
+                    <div class="result-row">
+                      <div class="result-avatar">
+                        <span> 1</span>
+                      </div>
+                      <div class="result-dados">
+
+                        <div class="result-name">
+                          item.name 
+                        </div>
+                        <div class="result-partido">
+                          item.partido
+                        </div>
+                        </div>
+                        <div class="result-button">
+                          <p>DEPUTADO</p>
+                        </div>
+                      
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

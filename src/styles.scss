@@ -17,6 +17,10 @@ body {
   font-family: text;
   src: url(./assets/fonts/Gotham-Font/Gotham-Black.otf);
 }
+@font-face {
+  font-family: 'Inter';
+  src: url('https://rsms.me/inter/inter.css');
+}
 .flex-container {
   display: flex;
   justify-content: center;

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { SearchRoutingModule } from './pages/search/search-routing.module';
 import { SearchModule } from './pages/search/search.module';
 import { ProfileRoutingModule } from './pages/profile/profile-routing.module';
@@ -31,6 +32,7 @@ import { TokenInterceptor } from './shared/http-header-intercep';
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
