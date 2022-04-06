@@ -1,28 +1,52 @@
-<header> 
+<header>
 
-<div class='toolbar'>
-<a href="/"> <div class='logo'> </div></a>
-<div class='login'>
-<span class="example-spacer"></span>
-  <div *ngIf="!user">
-    <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()">
-      <span class="fa fa-google"></span></button>
-  </div>
-  <div *ngIf="user">
-    <button mat-button="mat-button">
-      {{user.name}}
-    </button>
-    <button mat-icon-button="mat-icon-button" class="example-icon favorite-icon"
-      style="background-image: url({{user.photoUrl}});" aria-label="Example icon-button with heart icon"></button>
-    <button (click)="signOut()" mat-icon-button="mat-icon-button" class="example-icon favorite-icon"
-      aria-label="Example icon-button with heart icon">
-      <mat-icon style="color: red;">exit_to_app</mat-icon>
-    </button>
-  </div>
-</div>
+  <div class='toolbar'>
+    <a href="/">
+      <div class='logo'> </div>
+    </a>
 
-</div>
-<!--<mat-toolbar style="background-color: #501FA1;">
+
+
+    <div class='login'>
+      <span class="example-spacer"></span>
+
+
+
+      <div *ngIf="!user">
+        <button class="btn btn-social-icon btn-google" style="color: white;" (click)="signInWithGoogle()">
+          <span class="fa fa-google"></span></button>
+      </div>
+
+
+
+
+
+      <div *ngIf="user">
+        <button mat-button="mat-button">
+          {{user.name}}
+        </button>
+        <button mat-icon-button="mat-icon-button" class="example-icon favorite-icon"
+          style="background-image: url({{user.photoUrl}});" aria-label="Example icon-button with heart icon"></button>
+        <button (click)="signOut()" mat-icon-button="mat-icon-button" class="example-icon favorite-icon"
+          aria-label="Example icon-button with heart icon">
+          <mat-icon style="color: red;">exit_to_app</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="row">
+        <div class="col-md-12">
+          <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input [ngStyle]="{'width': '100%'}" type="text" pInputText placeholder="Digite um nome"
+              [(ngModel)]="findebar" matInput (keyup)="populate()" />
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--<mat-toolbar style="background-color: #501FA1;">
   <div class="container" style="padding: 1em;">
   <a href="/">
     <span><img src="../assets/images/components/Arte 4@3x 1logoToolbar.png" style="height: 40px" /></span>
@@ -54,7 +78,7 @@
 -->
 <section>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </section>
 <!--<section>
 
