@@ -1,3 +1,4 @@
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -15,6 +16,9 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CrudComponent } from './components';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CardModule } from 'primeng/card';
+import { ImageModule } from 'primeng/image';
+import { AvatarModule } from 'primeng/avatar';
 
 @NgModule({
   imports: [
@@ -24,13 +28,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     HttpClientModule,
     FormsModule,
+    AvatarModule,
     ReactiveFormsModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    MatButtonModule,
     MatDividerModule,
     MatListModule,
+    ImageModule,
     MatPaginatorModule,
     MatDialogModule,
     MatChipsModule,

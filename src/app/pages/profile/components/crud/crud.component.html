@@ -1,48 +1,95 @@
 <br><br>
-<div class="container" style="padding: 2em;">
-  <mat-card style="background-color: antiquewhite; width: 100%;">
+<div style="margin-top: 5%;">
+  <div class="container" style="padding: 2em;">
+    <mat-card id="card-search">
+      <div class="row">
+        <div class="col-md-3">
+          <p-image src="../../../../../assets/images/components/imagePreviewProfile.png" alt="Image" height="250"
+            width="250" [preview]="true">
+          </p-image>
+        </div>
+        <div class="col-md-9">
+          <div class="contariner" style="padding: 3em;">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="firstText-Desktop">{{candidato.name}} - {{candidato.partido}}</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div style="text-align: right;">
 
-    <div class="row">
-      <div class="col-md-8">
-        <div class="row">
-          <div class="col-md-6">
-            <p>{{candidato.name}}</p>
-          </div>
-          <div class="col-md-6">
-            <p>{{candidato.partido}}</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <p>{{candidato.uf}}</p>
-          </div>
-          <div class="col-md-6"></div>
-        </div>
-        <div class="row">
-          <mat-chip-list aria-label="Like">
-            <mat-chip (click)="toggleSelection('L')">
-              <mat-chip-avatar>
-                <i class="fa fa-thumbs-up"></i>
-              </mat-chip-avatar>
-              {{candidato.like}}
-            </mat-chip>
-            <mat-chip (click)="toggleSelection('U')">
-              <mat-chip-avatar>
-                <i class="fa fa-thumbs-down"></i>
-              </mat-chip-avatar>
-              {{candidato.unlike}}
-            </mat-chip>
-          </mat-chip-list>
-        </div>
+                      <button mat-raised-button
+                        style="background-color: #501FA1; color: white; letter-spacing: 1px;">DEPUTADO</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-8">
+                <mat-chip-list aria-label="Like">
+                  <mat-chip (click)="toggleSelection('L')">
+                    <mat-chip-avatar>
+                      <i class="fa fa-thumbs-up"></i>
+                    </mat-chip-avatar>
+                    {{candidato.like}}
+                  </mat-chip>
+                  <mat-chip (click)="toggleSelection('U')">
+                    <mat-chip-avatar>
+                      <i class="fa fa-thumbs-down"></i>
+                    </mat-chip-avatar>
+                    {{candidato.unlike}}
+                  </mat-chip>
+                </mat-chip-list>
+              </div>
+              <div class="col-md-4">
+                <div style="text-align: right;">
+                  <p-avatar shape="circle" label="{{candidato.uf}}" size="large"
+                    [style]="{'background-color':'#511fa199', 'color': '#ffffff'}"></p-avatar>
+                </div>
+              </div>
+            </div>
 
-        <div class="row" *ngIf="candidato.comentarios.length">
-          <ul>
-            <li *ngFor="let item of candidato.comentarios">
-              {{item.descricao}}
-            </li>
-          </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </mat-card>
+
+    </mat-card>
+  </div>
 </div>
+<!--
+        <div class="col-md-8">
+
+          <div class="row">
+            <div class="col-md-6">
+              <p>{{candidato.uf}}</p>
+            </div>
+            <div class="col-md-6"></div>
+          </div>
+          <div class="row">
+            <mat-chip-list aria-label="Like">
+              <mat-chip (click)="toggleSelection('L')">
+                <mat-chip-avatar>
+                  <i class="fa fa-thumbs-up"></i>
+                </mat-chip-avatar>
+                {{candidato.like}}
+              </mat-chip>
+              <mat-chip (click)="toggleSelection('U')">
+                <mat-chip-avatar>
+                  <i class="fa fa-thumbs-down"></i>
+                </mat-chip-avatar>
+                {{candidato.unlike}}
+              </mat-chip>
+            </mat-chip-list>
+          </div>
+
+          <div class="row" *ngIf="candidato.comentarios.length">
+            <ul>
+              <li *ngFor="let item of candidato.comentarios">
+                {{item.descricao}}
+              </li>
+            </ul>
+          </div>
+        </div> -->
