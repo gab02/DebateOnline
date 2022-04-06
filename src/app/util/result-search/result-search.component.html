@@ -1,0 +1,28 @@
+<div class="findbox">
+    <div class="titlefind">
+        <p>Esses são os candidatos encontrados</p>
+    </div>
+    <div class="result" *ngFor="let item of candidatos" (click)="getProfile(item)">
+        <div class="result-row">
+            <div class="result-avatar">
+                <span>
+                    1</span>
+            </div>
+            <div class="result-dados">
+
+                <div class="result-name">
+                    {{item.name}}
+                </div>
+                <div class="result-partido">
+                    {{item.partido}} 
+                </div>
+            </div>
+            <div class="result-button">
+                <p>DEPUTADO</p>
+            </div>
+        </div>
+        <div class="line"></div>
+    </div>
+    <div class="buttonfiltrar" (click)="gotosearch()"><p>Filtrar Pesquisa</p>
+    </div>
+</div>

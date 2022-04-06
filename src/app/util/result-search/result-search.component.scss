@@ -1,0 +1,265 @@
+.findbox {
+    /* Trailing content */
+
+    /* Auto layout */
+    display: grid;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1px 1px 0px 1px;
+
+    position: relative;
+    width: 90%;
+    left: 0px;
+    top: 150px;
+
+    background: rgba(255, 255, 255, 0.78);
+}
+
+
+.result {
+    width: 100%;
+    position: relative;
+    display: grid;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: sticky;
+
+    background: rgba(255, 255, 255, 0.78);
+}
+
+.titlefind {
+    /* Heading */
+
+    position: relative;
+
+
+
+    /* text-xs/leading-4/font-semibold/tracking-wide/uppercase */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+
+    /* gray/500 */
+    color: #6B7280;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 15px 0px 15px 0px;
+}
+
+.result-row {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    left: 1%;
+    top: 5px;
+    display: flex;
+}
+
+.result-avatar {
+    /* Avatar */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 40px;
+    height: 40px;
+    left: 0px;
+    top: 16px;
+
+
+    border-radius: 20px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 12px;
+}
+
+.result-dados {
+    position: relative;
+    width: 90%;
+}
+
+.result-name {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+
+    /* text-sm/leading-5/font-medium */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* gray/900 */
+    color: #111827;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.result-partido {
+    /* Supporting text */
+
+    position: relative;
+    width: 100%;
+    height: 30px;
+    left: 0px;
+    top: 20px;
+
+    /* text-sm/leading-5/font-medium */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* gray/500 */
+    color: #6B7280;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: auto;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.result-button {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 13px 9px 11px;
+
+    position: static;
+    width: 152px;
+    height: 38px;
+    left: 581px;
+    top: 17px;
+
+    background: rgba(80, 31, 161, 0.5);
+    border-radius: 19px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 12px;
+}
+
+.result-button p {
+    position: relative;
+    align-content: center;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    /* gray/900 */
+    color: #111827;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 8px;
+}
+
+
+.line {
+    /* Border */
+
+    position: relative;
+    width: 100%;
+    height: 1px;
+
+
+    /* gray/200 */
+    background: #E5E7EB;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 6;
+    align-self: center;
+    flex-grow: 0;
+    margin: 2px 0px;
+}
+
+.buttonfiltrar {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 17px;
+
+    position: relative;
+    width: 138px;
+    height: 38px;
+    left: 50%;
+    top: 2px;
+
+    /* Primary */
+    background: #501FA1;
+    /* shadow/sm */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 0px;
+}
+
+.buttonfiltrar p {
+    /* text-sm/leading-5/font-medium */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* white */
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+}

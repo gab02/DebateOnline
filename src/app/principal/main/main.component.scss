@@ -1,0 +1,206 @@
+.fundo {
+    /*fundo */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 103px;
+
+    background: rgba(80, 31, 161, 0.3);
+}
+
+.row {
+    display: flex;
+}
+
+.column-left {
+    float: left;
+    width: 30%;
+}
+
+.column-right {
+    float: right;
+    width: 70%;
+}
+
+
+.backgroundimage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 103px;
+
+    /* cinza */
+    background: #D7D2DB;
+}
+
+.backgroundimagem {
+    position: floor($number: 0);
+    width: 100%;
+    height: 1000px;
+    background-image: url("/assets/images/components/peoples.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.text-one {
+    position: relative;
+    width: 421px;
+    height: 217px;
+    left: 122px;
+    top: 140px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 59px;
+
+    /* branco */
+    color: #F2F2F2;
+}
+
+.imagem1 {
+    height: 32px;
+    width: 40px;
+    border-radius: 0px;
+
+    position: relative;
+    left: 50%;
+    right: 50%;
+    top: 130px;
+    bottom: 16.67%;
+
+    /* branco */
+    border: 0px solid #F2F2F2;
+}
+
+.SecondText-Desktop {
+    position: relative;
+    width: 100%;
+    height: 32px;
+    left: 0px;
+    top: 130px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 28px;
+    /* identical to box height, or 122% */
+    text-align: center;
+
+    /* gray/900 */
+    color: #111827;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 4px 0px;
+
+}
+
+.ThirdText-Desktop {
+    /* Description */
+
+    position: relative;
+    width: 100%;
+    height: 42px;
+    left: 0px;
+    top: 130px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    /* or 117% */
+    text-align: center;
+
+    /* branco */
+    color: #F2F2F2;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 4px 0px;
+}
+
+
+.inputsearch {
+    /* Form Fields/Text input */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 9px 13px;
+
+    position: relative;
+    width: 80%;
+    height: 38px;
+    left: 0px;
+    top: 130px;
+
+    /* white */
+    background: #FFFFFF;
+    /* gray/300 */
+    border: 1px solid #D1D5DB;
+    box-sizing: border-box;
+    /* shadow/sm */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.findbutton {
+    /* Button */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 17px;
+
+    position: relative;
+    width: 15%;
+    height: 38px;
+    left: 0px;
+    top: 130px;
+
+    /* Primary */
+    background: #501FA1;
+    /* shadow/sm */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* white */
+    color: #FFFFFF;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 16px;
+}
+

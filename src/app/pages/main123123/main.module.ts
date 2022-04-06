@@ -1,22 +1,24 @@
 import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
+import { UtilModule } from "../../util";
 import { MainComponent } from "./components";
 
 
 @NgModule({
   imports: [
-    BrowserModule,
     CommonModule,
-    RouterModule
+    BrowserModule,
+    RouterModule,
+    UtilModule
     ],
   declarations: [
     MainComponent
   ],
   providers: [
   ],
-  schemas: [ ]
+  schemas: []
 
 })
 export class MainModule { }

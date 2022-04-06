@@ -49,10 +49,10 @@
       <div class="container">
         <div class="card" id="card-search" style="height: auto;">
           <br>
+
           <div class="container">
             <p class="pre-header">Esses são os candidatos encontrados</p>
-          </div>s
-          <mat-list>
+          </div><mat-list>
             <div>
               <article>
                 <mat-list-item *ngFor="let item of candidatos; let i = index;" (click)="getProfile(item)">
@@ -72,6 +72,7 @@
             </div>
 
           </mat-list>
+          
         </div>
       </div>
     </div>

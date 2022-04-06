@@ -5,10 +5,11 @@ import { SearchService } from 'src/app/pages/search';
 import { Candidatos } from 'src/app/pages/search/models/candidatos';
 
 @Component({
+  selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponente implements OnInit {
+export class MainComponent implements OnInit {
 
   findebar: string = '';
   length: number;
@@ -18,24 +19,30 @@ export class MainComponente implements OnInit {
   pageEvent: PageEvent;
   pageSizeOptions: number[] = [5, 10, 25, 100];
 
-  candidatos: Candidatos[] = [];
+  candidatos: Candidatos[];
   candidato: Candidatos;
 
   constructor(public service: SearchService, public router: Router) { }
 
   ngOnInit(): void {
     this.currentPage = 1;
-    this.populate();
+    //this.populate();
   }
 
   populate() {
-    this.service
-      .carregarRegistroSelect(this.findebar, this.currentPage, this.pageSize)
-      .subscribe((data) => {
-        this.candidatos = data.candidatos;
-        this.length = data.totalPages;
-        console.log(data);
-      });
+    this.candidatos = []
+    console.log(this.findebar.length);
+    console.log(this.candidatos);
+    if (this.findebar.length >=3){
+        this.service
+        .carregarRegistroSelect(this.findebar, this.currentPage, this.pageSize)
+        .subscribe((data) => {
+          this.candidatos = data.candidatos;
+          this.length = data.totalPages;
+          console.log(data);
+        });
+    }
+    
   }
   getProfile(item: Candidatos) {
     this.router.navigate(['profile'], {
