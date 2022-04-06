@@ -4,7 +4,6 @@ import { SearchModule } from './pages/search/search.module';
 import { ProfileRoutingModule } from './pages/profile/profile-routing.module';
 import { ProfileModule } from './pages/profile/profile.module';
 import { LoginModule } from './pages/login/login.module';
-import { MainModule } from './pages/main123123/main.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
@@ -14,9 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginRoutingModule } from './pages/login/login-routing.module';
-import { MainRoutingModule } from './pages/main123123';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PreviewCandidatoComponent } from './pages/preview-candidato/preview-candidato.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {
   SocialLoginModule,
@@ -38,9 +35,7 @@ import { MainComponent } from './principal';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MainModule,
     FormsModule,
-    MainRoutingModule,
     LoginModule,
     LoginRoutingModule,
     ProfileModule,
